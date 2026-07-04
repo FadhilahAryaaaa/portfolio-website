@@ -1,0 +1,161 @@
+<!-- SEMUA PROJEK - ARYA FADHILAH -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semua Projek - Arya Fadhilah W.R.</title>
+    <meta name="description" content="Daftar lengkap proyek UI/UX Design, Front-End Development, dan otomasi n8n oleh Arya Fadhilah W.R.">
+    <link rel="canonical" href="project.html">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+                                    <!-- BODY WEB START -->
+<body>
+<!--------------------------------------------------------------------------------------------------- -->
+    <div class="blob-glow-1"></div>
+    <div class="blob-glow-2"></div>
+<!---------------------------------------------------------------------------------------------------->
+                                        <!-- HEADER HALAMAN -->
+    <main>
+    <section class="project-section" style="padding-top: 60px; padding-bottom: 20px;">
+        <div class="project-container">
+            <a href="porto arya fadhilah.html#projects" class="btn-secondary" style="display:inline-flex; align-items:center; gap:8px; margin-bottom: 30px;">
+                <i class="fa-solid fa-arrow-left"></i> Kembali ke Beranda
+            </a>
+            <h2 class="project-main-title" style="margin-bottom: 20px;">Semua Projek Saya</h2>
+            <p class="section-subtitle-center" style="margin-top: 0; margin-bottom: 50px;">
+                Kumpulan lengkap karya yang pernah saya kerjakan, mulai dari desain UI/UX, pengembangan front-end, hingga sistem otomatisasi. Klik salah satu kartu di bawah untuk melihat detail lengkapnya.
+            </p>
+        </div>
+    </section>
+<!---------------------------------------------------------------------------------------------------->
+                                        <!-- SECTION PORTOFOLIO LENGKAP -->
+    <section id="projects" class="project-section" style="padding-top: 0;">
+        <div class="project-container">
+
+            <div class="project-grid">
+                <div class="project-card portfolio-item" data-category="projek" onclick="openProjectModal(1)" role="button" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' '){ event.preventDefault(); openProjectModal(1); }">
+                    <div class="project-img-box">
+                        <img src="assets/bahan%20web/automasi%20depan.PNG" alt="Smart Financial Parser & Calendar Agenda Assistant - N8N Automasi" class="project-card-img" loading="lazy">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">N8N Automasi</span>
+                        <h3 class="project-title">Smart Financial Parser & Calendar Agenda Assistant</h3>
+                        <p class="project-desc">Mengembangkan sistem otomatisasi berbasis teks untuk menyederhanakan pencatatan keuangan dan manajemen jadwal harian.</p>
+                        <div class="project-tags">
+                            <span>N8N Automation</span>
+                            <span>Research</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card portfolio-item" data-category="projek" onclick="openProjectModal(2)" role="button" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' '){ event.preventDefault(); openProjectModal(2); }">
+                    <div class="project-img-box">
+                        <img src="assets/bahan%20web/porto%201.PNG" alt="Personal Portfolio Website v1.0 - UI/UX Design & Front-End Development" class="project-card-img" loading="lazy">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Personal Portfolio Website v1.0</span>
+                        <h3 class="project-title">UI/UX Design & Front-End Development</h3>
+                        <p class="project-desc">Merancang dan membangun website portofolio pribadi sebagai representasi digital dari keahlian saya.</p>
+                        <div class="project-tags">
+                            <span>HTML</span>
+                            <span>CSS Flexbox</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card portfolio-item" data-category="projek" onclick="openProjectModal(3)" role="button" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' '){ event.preventDefault(); openProjectModal(3); }">
+                    <div class="project-img-box">
+                        <img src="assets/bahan%20web/weather%20now%201.PNG" alt="Weather Now - Aplikasi Pemantau Cuaca buruk real-time" class="project-card-img" loading="lazy">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">weather now/ weather app</span>
+                        <h3 class="project-title">sistem peringatan dini cuaca buruk</h3>
+                        <p class="project-desc">Aplikasi pemantau cuaca real-time yang berfokus pada deteksi dini cuaca ekstrem. Memberikan notifikasi instan langsung ke perangkat pengguna sebelum cuaca buruk melanda untuk memastikan keamanan aktivitas sehari-hari.</p>
+                        <div class="project-tags">
+                            <span>Figma Desain</span>
+                            <span>Responsive</span>
+                        </div>
+                    </div>
+                </div>
+
+                        <!-- Kalau nambah projek baru, tinggal copy 1 blok .project-card di atas, -->
+                        <!-- ganti gambar, teks, dan nomor di openProjectModal(id) -->
+                        <!-- lalu tambahkan datanya di projectData dalam script.js -->
+
+            </div>
+
+            <div class="more-project-btn-container" id="more-projects-wrapper">
+                <a href="#" class="more-project-btn" onclick="window.scrollTo({top:0, behavior:'smooth'}); return false;">Kembali ke Atas</a>
+            </div>
+        </div>
+
+        <div id="projectModal" class="project-modal" onclick="closeProjectModal()" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+            <div class="modal-content" onclick="event.stopPropagation()">
+                <span class="modal-close" onclick="closeProjectModal()" role="button" tabindex="0" aria-label="Tutup detail projek" onkeydown="if(event.key === 'Enter' || event.key === ' '){ event.preventDefault(); closeProjectModal(); }">&times;</span>
+                <div class="modal-img-wrapper">
+                    <img id="modalImg" src="" alt="Detail Gambar" class="modal-main-img">
+                    <span id="modalCategory" class="modal-category-badge"></span>
+                </div>
+                <div class="modal-body">
+                    <h3 id="modalTitle"></h3>
+                    <div class="modal-meta-grid" id="modalMeta"></div>
+                    <p id="modalDesc"></p>
+
+                    <h4 class="modal-section-label" id="modalChallengeLabel" style="display:none;">Latar Belakang & Tantangan</h4>
+                    <p class="modal-text" id="modalChallenge" style="display:none;"></p>
+
+                    <h4 class="modal-section-label" id="modalSolutionLabel" style="display:none;">Pendekatan & Solusi</h4>
+                    <p class="modal-text" id="modalSolution" style="display:none;"></p>
+
+                    <h4 class="modal-section-label" id="modalFeaturesLabel" style="display:none;">Fitur Utama</h4>
+                    <ul class="modal-features" id="modalFeatures"></ul>
+
+                    <h4 class="modal-section-label" id="modalProcessLabel" style="display:none;">Proses Pengerjaan</h4>
+                    <ol class="modal-features modal-process" id="modalProcess" style="display:none;"></ol>
+
+                    <h4 class="modal-section-label" id="modalResultLabel" style="display:none;">Hasil & Pembelajaran</h4>
+                    <p class="modal-text" id="modalResult" style="display:none;"></p>
+
+                    <div class="modal-tags" id="modalTags"></div>
+                    <div class="modal-cta" id="modalCta"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+<!------------------------------------------------------------------------------------------------------->
+                                        <!-- SECTION FOOTER -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-row-layout">
+                <div class="footer-left">
+                    <img src="assets/bahan%20web/portofolio.png" alt="Logo" class="footer-logo-img" loading="lazy">
+                </div>
+
+                <div class="footer-right">
+                    <div class="footer-socials">
+                        <a href="https://wa.me/628xxxxxxxxxx" target="_blank" rel="noopener noreferrer" class="social-item whatsapp" title="WhatsApp">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="#ffffff"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.454L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.42 9.864-9.858.002-2.634-1.023-5.11-2.885-6.973C16.53 1.91 14.05 .88 11.416.88c-5.44 0-9.863 4.42-9.867 9.861-.001 1.73.457 3.41 1.32 4.91L1.81 21.12l5.837-1.532zM18.13 14.91c-.33-.164-1.953-.964-2.251-1.074-.3-.109-.518-.164-.736.164-.218.327-.844 1.056-1.036 1.274-.192.218-.383.245-.713.082-.33-.164-1.393-.513-2.653-1.637-.98-.874-1.64-1.953-1.832-2.28-.192-.327-.02-.504.145-.668.148-.148.33-.383.495-.574.165-.192.22-.328.33-.547.11-.218.054-.41-.028-.574-.082-.164-.736-1.774-1.009-2.43-.266-.64-.538-.554-.736-.564-.19-.01-.408-.012-.627-.012-.218 0-.573.082-.873.41-.3.327-1.146 1.119-1.146 2.729s1.173 3.167 1.336 3.386c.164.219 2.31 3.527 5.596 4.945.782.337 1.392.539 1.868.69.786.25 1.502.214 2.067.13.63-.093 1.953-.799 2.225-1.53.273-.73.273-1.356.191-1.487-.082-.131-.273-.212-.603-.376z"/></svg>
+                        </a>
+                        <a href="mailto:arkafadhillah3@gmail.com" class="social-item email-btn" title="Email">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        </a>
+                        <a href="https://github.com/FadhilahAryaaaa" target="_blank" rel="noopener noreferrer" class="social-item github" title="GitHub">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="#ffffff"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom-row">
+                <p>&copy; 2026 Arya Fadhilah W.R. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+<!------------------------------------------------------------------------------------------------------------->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,506 @@
+<!-- ID WEB  -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arya Fadhilah W.R.-portofolio</title>
+    <meta name="description" content="Portofolio resmi Arya Fadhilah W.R. - UI/UX Designer & Front-End Developer. Temukan proyek-proyek terbaru, keahlian, dan layanan pengembangan web saya.">
+    <link rel="canonical" href="porto%20arya%20fadhilah.html">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js" defer></script>
+</head>
+                                    <!-- BODY WEB START -->
+<body>
+                                <!-- NOTIF BERHASIL DOWNLOAD CV -->
+    <div id="top-notification" class="top-toast">
+        <div class="checkmark-circle">
+            <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                <circle class="checkmark-circle-line" cx="26" cy="26" r="25" fill="none"/>
+                <path class="checkmark-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+            </svg>
+        </div>
+        <span>CV berhasil diunduh!</span>
+    </div>
+<!--------------------------------------------------------------------------------------------------- -->
+                                      <!-- WELCOME PAGE  -->
+    <div id="welcome-page">
+        <canvas id="dotGridCanvas"></canvas>
+        <div id="dotGridBg"></div>
+        <div id="cursorGlow"></div> <div class="welcome-content">
+            <div class="welcome-icons" id="welcomeIcons">
+                <i class="fa-solid fa-code"></i>
+                <i class="fa-solid fa-user"></i>
+                <i class="fa-solid fa-globe"></i>
+            </div>
+            <h1 id="welcome-text" role="none">Hello</h1>
+            <div class="portfolio-title" id="portfolioTitle">TO MY PORTFOLIO</div>
+            <div class="web-link-container">
+                <span id="webLinkText"></span>
+            </div>
+        </div>
+    </div>
+<!----------------------------------------------------------------------------------------------------------->
+                                        <!-- NAVIGASI BAR -->
+        <div class="blob-glow-1"></div>
+        <div class="blob-glow-2"></div>
+    <nav class="navbar">
+            <img src="assets/bahan%20web/portofolio.png" alt="Logo" class="logo">
+            <ul class="nav-link" id="navLinkList">
+                <li><a href="#hero" data-lang="nav-home">Beranda</a></li>
+                <li><a href="#about" data-lang="nav-about">Tentang</a></li>
+                <li><a href="#services" data-lang="nav-services">Layanan</a></li>
+                <li><a href="#projects" data-lang="nav-projects">Portofolio</a></li>
+                <li><a href="#contact" data-lang="nav-contact">Kontak</a></li>
+                <li><button id="themeToggle" style="background:none; border:none; color:inherit; font-size:1.2rem; cursor:pointer;" aria-label="Ubah tema">🌙</button></li>
+                <li>
+                    <select id="langSelect" onchange="changeLanguage(this.value)" style="background: #1e293b; color: #fff; border: 1px solid rgba(255,255,255,0.2); border-radius: 4px; padding: 2px 5px; cursor: pointer;" aria-label="Pilih bahasa">
+                        <option value="id">🇮🇩 ID</option>
+                        <option value="en">🇬🇧 EN</option>
+                        <option value="ko">🇰🇷 KO</option>
+                        <option value="zh">🇨🇳 ZH</option>
+                    </select>
+                </li>
+            </ul>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Buka menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+<!---------------------------------------------------------------------------------------------------->
+                                        <!-- SECTION NAME -->
+        <div class="nav-overlay" id="navOverlay"></div>
+    <main>
+    <section id="hero" class="hero-container">
+        <div class="hero-section">
+            <lottie-player 
+                src="assets/home screen animation.json" 
+                background="transparent" 
+                speed="1" 
+                style="width: 300px; height: 300px;" 
+                loop 
+                autoplay>
+            </lottie-player>
+        </div>
+
+        <div class="box-nama">
+            <h1 class="nama-saya">
+                <span class="word-1">ARYA</span>
+                <span class="word-2">FADHILAH</span>
+            </h1>
+            <p class="sub-nama" data-lang="hero-subtitle" id="typing-text"></p>
+            <div class="hero-cta">
+                <a href="#projects" class="btn-primary" data-lang="lihat-projek">Lihat Projek</a>
+                <a href="assets/bahan%20web/Portofolio%20Arya.pdf" download="CV_Arya_Fadhilah.pdf" class="btn btn-outline" id="unduh-cv-btn" data-lang="unduh-cv">
+                    Unduh CV
+                </a>
+            </div>
+        </div>
+    </section>
+<!---------------------------------------------------------------------------------------------------------------->
+                                                <!-- SECTION TENTANG SAYA -->
+    <section id="about" class="about-section">
+        <div class="about-container">
+            <div class="about-left">
+               <div class="glow-effect"></div>
+                <div class="shine-layer"></div>
+                <img src="assets/bahan%20web/foto%20profil%20porto.png" alt="Arya Fadhilah" class="my-photo">
+                
+                <div class="stat-container-adjusted">
+                    <div class="stat-box">
+                        <span class="stat-number">10<span class="plus-merah">+</span></span>
+                        <span class="stat-label" data-lang="stat-projects">Projek Sukses</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number">1<span class="plus-merah">+</span></span>
+                        <span class="stat-label" data-lang="stat-experience">Tahun pengalaman</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-right">
+                <h2 class="about-title" data-lang="about-title">Tentang Saya</h2>
+                <p class="about-desk" data-lang="about-desc">
+                    Saya seorang UI/UX Designer dan Front-end Developer yang berfokus pada pembuatan antarmuka yang sederhana, modern, dan mudah digunakan. Saya senang merancang pengalaman digital yang tidak hanya menarik secara visual, tetapi juga nyaman dan efisien bagi pengguna.
+                </p>
+                
+                <h3 class="skills-subtitle" data-lang="about-skills-title">Keahlian Utama:</h3>
+                <ul class="skills-list">
+                    <li data-lang="about-skill-1">User Interface (UI) Design</li>
+                    <li data-lang="about-skill-2">User Experience (UX) Research & Prototyping</li>
+                    <li data-lang="about-skill-3">Responsive Web Development (HTML, CSS, JavaScript)</li>
+                </ul>
+
+               <h3 class="tools-subtitle" data-lang="about-tools-title">Tools Yang Digunakan:</h3>
+        <div class="tools-grid">
+            <div class="tool-item">
+                <span class="tool-text">Figma</span>
+                <div class="shine-layer"></div>
+            </div>
+            <div class="tool-item">
+                <span class="tool-text">VS Code</span>
+                <div class="shine-layer"></div>
+            </div>
+            <div class="tool-item">
+                <span class="tool-text">Git / GitHub</span>
+                <div class="shine-layer"></div>
+            </div>
+            <div class="tool-item">
+                <span class="tool-text">CSS Grid & Flexbox</span>
+                <div class="shine-layer"></div>
+            </div>
+        </div>
+            </div>
+        </div>
+    </section>
+<!----------------------------------------------------------------------------------------------------->
+                                        <!-- SECTION LAYANAN SAYA -->
+    <section id="services" class="services-section">
+        <h2 class="section-title-center" data-lang="services-title">Layanan Saya</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-palette" style="color: #ef4444;"></i></div>
+                <h3 data-lang="service-title-1">UI/UX Design</h3>
+                <p data-lang="service-desc-1">Membuat desain antarmuka (wireframe & high-fidelity) yang modern, estetik, dan berfokus pada kenyamanan pengguna menggunakan Figma.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-code" style="color: #3b82f6;"></i></div>
+                <h3 data-lang="service-title-2">Pengembang UI/UX & Web developer</h3>
+                <p data-lang="service-desc-2">Mengubah desain visual menjadi kode web yang bersih, responsif, dan interaktif menggunakan HTML, CSS, dan JavaScript.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-gears" style="color: #10b981;"></i></div>
+                <h3 data-lang="service-title-3">Responsive Design</h3>
+                <p data-lang="service-desc-3">Memastikan website tampil sempurna dan berfungsi dengan baik di semua ukuran perangkat, baik smartphone, tablet, maupun desktop.</p>
+            </div>
+        </div>
+    </section>
+    <!---------------------------------------------------------------------------------------------------->
+                                        <!-- SECTION ALUR KERJA SAYA -->
+    <section id="process" class="process-section">
+        <h2 class="section-title-center" data-lang="process-title">Alur Kerja Saya</h2>
+        <p class="section-subtitle-center" data-lang="process-subtitle">Bagaimana saya mentransformasikan ide Anda menjadi produk digital yang nyata.</p>
+        
+        <div class="process-grid">
+            <div class="process-card">
+                <div class="process-num">01</div>
+                <h3 data-lang="process-card-title-1">Riset & Ideasi</h3>
+                <p data-lang="process-card-desc-1">Memahami kebutuhan pengguna, menganalisa kompetitor, dan menentukan solusi terbaik dari masalah yang ada.</p>
+            </div>
+            <div class="process-card">
+                <div class="process-num">02</div>
+                <h3 data-lang="process-card-title-2">UI/UX Design</h3>
+                <p data-lang="process-card-desc-2">Menyusun tata letak (wireframe) hingga membuat desain akhir yang estetik, modern, dan interaktif di Figma.</p>
+            </div>
+            <div class="process-card">
+                <div class="process-num">03</div>
+                <h3 data-lang="process-card-title-3">Front-End Coding</h3>
+                <p data-lang="process-card-desc-3">Mentranslasikan aset desain dari Figma menjadi kode web yang bersih, cepat, dan responsif di semua ukuran layar.</p>
+            </div>
+            <div class="process-card">
+                <div class="process-num">04</div>
+                <h3 data-lang="process-card-title-4">Uji Coba & Rilis</h3>
+                <p data-lang="process-card-desc-4">Memastikan tidak ada bug, mengoptimalkan kecepatan animasi, dan meluncurkan website agar bisa diakses publik.</p>
+            </div>
+        </div>
+    </section>
+    <!--------------------------------------------------------------------------------------------------->
+                                    <!-- SECTION LOGO BERGERAK KIRI KANAN -->
+    <section class="marquee-section">
+        <div class="marquee-track track-left">
+            <div class="marquee-content-box">
+                <div class="marquee-card"><i class="fa-brands fa-html5" style="color: #e34c26;"></i><span>HTML5</span></div>
+                <div class="marquee-card"><i class="fa-brands fa-css3-alt" style="color: #264de4;"></i><span>CSS3</span></div>
+                <div class="marquee-card"><i class="fa-brands fa-js" style="color: #f7df1e;"></i><span>JavaScript</span></div>
+                <div class="marquee-card"><i class="fa-brands fa-figma" style="color: #a259ff;"></i><span>Figma</span></div>
+                <div class="marquee-card"><i class="fa-solid fa-network-wired" style="color: #ff6c37;"></i><span>n8n Automation</span></div>
+                <div class="marquee-card"><i class="fa-brands fa-git-alt" style="color: #f1502f;"></i><span>Git</span></div>
+                <div class="marquee-card"><i class="fa-brands fa-html5" style="color: #e34c26;"></i><span>HTML5</span></div>
+                <div class="marquee-card"><i class="fa-brands fa-css3-alt" style="color: #264de4;"></i><span>CSS3</span></div>
+                <div class="marquee-card"><i class="fa-brands fa-js" style="color: #f7df1e;"></i><span>JavaScript</span></div>
+                <div class="marquee-card"><i class="fa-brands fa-figma" style="color: #a259ff;"></i><span>Figma</span></div>
+                <div class="marquee-card"><i class="fa-solid fa-network-wired" style="color: #ff6c37;"></i><span>n8n Automation</span></div>
+                <div class="marquee-card"><i class="fa-brands fa-git-alt" style="color: #f1502f;"></i><span>Git</span></div>
+            </div>
+        </div>
+
+        <div class="marquee-track track-right">
+            <div class="marquee-content-box">
+                <div class="marquee-card"><i class="fa-solid fa-bezier-curve" style="color: #00d2ff;"></i><span>UI/UX Design</span></div>
+                <div class="marquee-card"><i class="fa-solid fa-mobile-screen-button" style="color: #4ade80;"></i><span>Responsive</span></div>
+                <div class="marquee-card"><i class="fa-solid fa-cloud-arrow-down" style="color: #a855f7;"></i><span>REST API</span></div>
+                <div class="marquee-card"><i class="fa-solid fa-braces" style="color: #ffff00;"></i><span>JSON Data</span></div>
+                <div class="marquee-card"><i class="fa-solid fa-laptop-code" style="color: #007acc;"></i><span>VS Code</span></div>
+                <div class="marquee-card"><i class="fa-brands fa-github" style="color: #757575;"></i><span>GitHub</span></div>
+                <div class="marquee-card"><i class="fa-solid fa-bezier-curve" style="color: #00d2ff;"></i><span>UI/UX Design</span></div>
+                <div class="marquee-card"><i class="fa-solid fa-mobile-screen-button" style="color: #4ade80;"></i><span>Responsive</span></div>
+                <div class="marquee-card"><i class="fa-solid fa-cloud-arrow-down" style="color: #a855f7;"></i><span>REST API</span></div>
+                <div class="marquee-card"><i class="fa-solid fa-braces" style="color: #38bdf8;"></i><span>JSON Data</span></div>
+                <div class="marquee-card"><i class="fa-solid fa-laptop-code" style="color: #007acc;"></i><span>VS Code</span></div>
+                <div class="marquee-card"><i class="fa-brands fa-github" style="color: #ffffff;"></i><span>GitHub</span></div>
+            </div>
+        </div>
+    </section>
+<!----------------------------------------------------------------------------------------------------------->
+                                        <!-- SECTION PORTOFOLIO SAYA -->
+   <section id="projects" class="project-section">
+        <div class="project-container">
+            <h2 class="project-main-title" data-lang="portfolio-title">Portofolio Saya</h2>
+            
+            <div class="portfolio-tabs">
+                <button class="tab-btn active" data-tab="projek" data-lang="tab-projects">Projek</button>
+                <button class="tab-btn" data-tab="sertifikat" data-lang="tab-certificates">Sertifikat</button>
+                <button class="tab-btn" data-tab="tech" data-lang="tab-tech">Tech Stack</button>
+            </div>
+            
+            <div class="project-grid">
+                <div class="project-card portfolio-item" data-category="projek" onclick="openProjectModal(1)" role="button" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' '){ event.preventDefault(); openProjectModal(1); }">
+                    <div class="project-img-box">
+                        <img src="assets/bahan%20web/automasi%20depan.PNG" alt="Smart Financial Parser & Calendar Agenda Assistant - N8N Automasi" class="project-card-img" loading="lazy">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category" data-lang="title1">N8N Automasi</span>
+                        <h3 class="project-title" data-lang="title1-judul">Smart Financial Parser & Calendar Agenda Assistant</h3>
+                        <p class="project-desc" data-lang="title1-deskripsi">Mengembangkan sistem otomatisasi berbasis teks untuk menyederhanakan pencatatan keuangan dan manajemen jadwal harian.</p>
+                        <div class="project-tags">
+                            <span>N8N Automation</span>
+                            <span>Research</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card portfolio-item" data-category="projek" onclick="openProjectModal(2)" role="button" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' '){ event.preventDefault(); openProjectModal(2); }">
+                    <div class="project-img-box">
+                        <img src="assets/bahan%20web/porto%201.PNG" alt="Personal Portfolio Website v1.0 - UI/UX Design & Front-End Development" class="project-card-img" loading="lazy">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category" data-lang="title2">Personal Portfolio Website v1.0</span>
+                        <h3 class="project-title" data-lang="title2-judul">UI/UX Design & Front-End Development</h3>
+                        <p class="project-desc" data-lang="title2-deskripsi">Merancang dan membangun website portofolio pribadi sebagai representasi digital dari keahlian saya.</p>
+                        <div class="project-tags">
+                            <span>HTML</span>
+                            <span>CSS Flexbox</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card portfolio-item" data-category="projek" onclick="openProjectModal(3)" role="button" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' '){ event.preventDefault(); openProjectModal(3); }">
+                    <div class="project-img-box">
+                        <img src="assets/bahan%20web/weather%20now%201.PNG" alt="Weather Now - Aplikasi Pemantau Cuaca buruk real-time" class="project-card-img" loading="lazy">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category" data-lang="title3">weather now/ weather app</span>
+                        <h3 class="project-title" data-lang="title3-judul">sistem peringatan dini cuaca buruk</h3>
+                        <p class="project-desc" data-lang="title3-deskripsi">Aplikasi pemantau cuaca real-time yang berfokus pada deteksi dini cuaca ekstrem. Memberikan notifikasi instan langsung ke perangkat pengguna sebelum cuaca buruk melanda untuk memastikan keamanan aktivitas sehari-hari.</p>
+                        <div class="project-tags">
+                            <span>Figma Desain</span>
+                            <span>Responsive</span>
+                        </div>
+                    </div>
+                </div>
+
+                        <!-- NANTI DIPAKE, SEKARANG DI NON AKTIFKAN DULU -->
+
+                <div class="certificate-card portfolio-item" data-category="sertifikat" style="display: none;">
+                    <div class="certificate-img-box">
+                        <img src="assets/bahan%20web/background%20putih.jpg" alt="Sertifikat Kompetensi Keahlian" class="certificate-img" loading="lazy">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category" data-lang="cert1">Certificate</span>
+                        <h3 class="project-title" data-lang="cert1-judul">certifikat menyusul</h3>
+                        <p class="project-desc" data-lang="cert1-deskripsi">Sertifikasi kompetensi keahlian Front-End Web Development tingkat dasar.</p>
+                    </div>
+                </div> 
+
+                <div class="portfolio-item tech-stack-grid" data-category="tech" style="display: none;">
+                    <div class="tech-box"><i class="fa-brands fa-html5" style="color: #e34c26;"></i><span>HTML</span></div>
+                    <div class="tech-box"><i class="fa-brands fa-css3-alt" style="color: #264de4;"></i><span>CSS</span></div>
+                    <div class="tech-box"><i class="fa-brands fa-js" style="color: #f7df1e;"></i><span>JavaScript</span></div>
+                    <div class="tech-box"><i class="fa-solid fa-circle-nodes" style="color: #ff6c37;"></i><span>N8N</span></div>
+                    <div class="tech-box"><i class="fa-solid fa-code" style="color: #007acc;"></i><span>VS Code</span></div>
+                    <div class="tech-box"><i class="fa-brands fa-github" style="color: #ffffff;"></i><span>GitHub</span></div>
+                </div>
+            </div>
+
+            <div class="more-project-btn-container" id="more-projects-wrapper">
+                <a href="project.html" class="more-project-btn" data-lang="view-all-projects">Lihat Semua Projek</a>
+            </div>
+        </div>
+
+        <div id="projectModal" class="project-modal" onclick="closeProjectModal()" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+            <div class="modal-content" onclick="event.stopPropagation()">
+                <span class="modal-close" onclick="closeProjectModal()" role="button" tabindex="0" aria-label="Tutup detail projek" onkeydown="if(event.key === 'Enter' || event.key === ' '){ event.preventDefault(); closeProjectModal(); }">&times;</span>
+                <div class="modal-img-wrapper">
+                    <img id="modalImg" src="" alt="Detail Gambar" class="modal-main-img">
+                    <span id="modalCategory" class="modal-category-badge"></span>
+                </div>
+                <div class="modal-body">
+                    <h3 id="modalTitle"></h3>
+                    <div class="modal-meta-grid" id="modalMeta"></div>
+                    <p id="modalDesc"></p>
+                    <h4 class="modal-section-label" id="modalFeaturesLabel" style="display:none;">Fitur Utama</h4>
+                    <ul class="modal-features" id="modalFeatures"></ul>
+                    <div class="modal-tags" id="modalTags"></div>
+                    <div class="modal-cta" id="modalCta"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-------------------------------------------------------------------------------------------------------->
+                                <!-- SECTION REKAM JEJAK DAN PENGALAMAN -->
+    <section id="experience" class="timeline-section">
+        <h2 class="section-title-center" data-lang="experiment-title">Rekam Jejak & Pengalaman</h2>
+        <div class="timeline-container">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date"><time datetime="2025">2025</time> - Sekarang</div>
+                <div class="timeline-content">
+                    <h3 data-lang="service-title-100">Freelance UI/UX & Web Developer</h3>
+                    <p class="timeline-company" data-lang="title-jejak">Mandiri / Remote</p>
+                    <p data-lang="jejak-deskripsi">Menerima projek pembuatan landing page, perancangan antarmuka aplikasi, serta implementasi sistem otomasi menggunakan n8n.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date"><time datetime="2023">2023</time> - <time datetime="2025">2025</time></div>
+                <div class="timeline-content">
+                    <h3 data-lang="jejak-deskripsi2">Pendidikan Bidang IT / Desain</h3>
+                    <p class="timeline-company" data-lang="pendidikan">Institusi Pendidikan</p>
+                    <p data-lang="mempelajari">Mempelajari dasar-dasar rekayasa perangkat lunak, algoritma pemrograman, serta prinsip dasar seni desain grafis.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!------------------------------------------------------------------------------------------------------->
+                                            <!-- SECTION HUBUNGI SAYA -->
+    <section id="contact" class="contact-section">
+            <div class="contact-container">
+            <div class="contact-grid-top">
+        <div>
+            <h2 class="contact-cta-text" data-lang="contact-title">Hubungi Saya</h2>
+            
+            <div class="social-grid">
+                <a href="https://instagram.com/holoridenakriding._" target="_blank" rel="noopener noreferrer" class="social-item instagram" title="Instagram">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                </a>
+                <a href="https://linkedin.com/in/username_mu" target="_blank" rel="noopener noreferrer" class="social-item linkedin" title="LinkedIn">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="#ffffff"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                </a>
+                <a href="https://github.com/FadhilahAryaaaa" target="_blank" rel="noopener noreferrer" class="social-item github" title="GitHub">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="#ffffff"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                </a>
+                <a href="https://wa.me/628xxxxxxxxxx" target="_blank" rel="noopener noreferrer" class="social-item whatsapp" title="WhatsApp">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="#ffffff"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.454L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.42 9.864-9.858.002-2.634-1.023-5.11-2.885-6.973C16.53 1.91 14.05 .88 11.416.88c-5.44 0-9.863 4.42-9.867 9.861-.001 1.73.457 3.41 1.32 4.91L1.81 21.12l5.837-1.532zM18.13 14.91c-.33-.164-1.953-.964-2.251-1.074-.3-.109-.518-.164-.736.164-.218.327-.844 1.056-1.036 1.274-.192.218-.383.245-.713.082-.33-.164-1.393-.513-2.653-1.637-.98-.874-1.64-1.953-1.832-2.28-.192-.327-.02-.504.145-.668.148-.148.33-.383.495-.574.165-.192.22-.328.33-.547.11-.218.054-.41-.028-.574-.082-.164-.736-1.774-1.009-2.43-.266-.64-.538-.554-.736-.564-.19-.01-.408-.012-.627-.012-.218 0-.573.082-.873.41-.3.327-1.146 1.119-1.146 2.729s1.173 3.167 1.336 3.386c.164.219 2.31 3.527 5.596 4.945.782.337 1.392.539 1.868.69.786.25 1.502.214 2.067.13.63-.093 1.953-.799 2.225-1.53.273-.73.273-1.356.191-1.487-.082-.131-.273-.212-.603-.376z"/></svg>
+                </a>
+                <a href="mailto:arkafadhillah3@gmail.com" class="social-item email-btn" title="Email">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </a>
+            </div>
+            
+            <div class="motto-box">
+                <p class="motto-text" data-lang="contact-subtitle">"Punya ide projek luar biasa atau sekadar ingin menyapa? Silakan hubungi saya melalui form di bawah ini."</p>
+                <p class="motto-author">- Arya 2026</p>
+            </div>
+        </div>
+
+    <form action="https://formspree.io/f/xxxxxxxx" method="POST" class="email-form">
+        <div class="form-group">
+            <label for="contactName" data-lang="form-name">Nama Lengkap</label>
+            <input type="text" id="contactName" name="name" placeholder="Masukkan nama Anda..." required>
+        </div>
+        <div class="form-group">
+            <label for="contactEmail" data-lang="form-email">Alamat Email</label>
+            <input type="email" id="contactEmail" name="email" placeholder="Masukkan email aktif Anda..." required>
+        </div>
+        <div class="form-group">
+            <label for="contactMessage" data-lang="form-message">Pesan Anda</label>
+            <textarea id="contactMessage" name="message" rows="4" placeholder="Tulis pesan Anda di sini..." required></textarea>
+        </div>
+        <button type="submit" class="submit-btn-active" data-lang="form-btn">Kirim Pesan</button>
+    </form>
+        </div>
+
+            <hr class="contact-divider">
+
+                <div class="comment-section">
+            <h3 class="comment-title" data-lang="comment-section-title">Kolom Komentar</h3>
+            <form class="comment-form" id="mainCommentForm">
+                <div class="comment-form-grid">
+                    <div class="form-group">
+                        <label for="commentName" data-lang="form-name">Nama Lengkap</label>
+                        <input type="text" id="commentName" placeholder="Nama Anda..." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="commentText" data-lang="form-message">Pesan Anda</label>
+                        <input type="text" id="commentText" placeholder="Komentar Anda..." required>
+                    </div>
+                </div>
+                <button type="submit" class="btn-disabled" data-lang="form-btn">Kirim Pesan</button>
+            </form>
+
+            <div class="comment-display-area">
+                <h4 class="display-title" data-lang="comment-display-title">Komentar</h4>
+                <div id="commentContainer">
+                    <div class="comment-card-item">
+                        <div class="comment-user-flex">
+                            <div class="comment-avatar"></div>
+                            <div class="comment-user-info">
+                                <h5>M. Rizky</h5>
+                                <span data-lang="nav-comment">visitor</span>
+                            </div>
+                        </div>
+                        <p class="comment-content" data-lang="about-comment">MANTAPP MASS .</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+                </div>
+    </section>
+    </main>
+<!------------------------------------------------------------------------------------------------------->
+                                        <!-- SECTION FOOTER -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-row-layout">
+                <div class="footer-left">
+                    <img src="assets/bahan%20web/portofolio.png" alt="Logo" class="footer-logo-img" loading="lazy">
+                </div>
+                
+                <div class="footer-center">
+                    <ul class="footer-nav">
+                        <li><a href="#hero" data-lang="nav-home">Beranda</a></li>
+                        <li><a href="#about" data-lang="nav-about">Tentang</a></li>
+                        <li><a href="#projects" data-lang="nav-projects">Projek</a></li>
+                        <li><a href="#contact" data-lang="nav-contact">Kontak</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-right">
+                    <div class="footer-socials">
+                        <a href="https://wa.me/628xxxxxxxxxx" target="_blank" rel="noopener noreferrer" class="social-item whatsapp" title="WhatsApp">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="#ffffff"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.454L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.42 9.864-9.858.002-2.634-1.023-5.11-2.885-6.973C16.53 1.91 14.05 .88 11.416.88c-5.44 0-9.863 4.42-9.867 9.861-.001 1.73.457 3.41 1.32 4.91L1.81 21.12l5.837-1.532zM18.13 14.91c-.33-.164-1.953-.964-2.251-1.074-.3-.109-.518-.164-.736.164-.218.327-.844 1.056-1.036 1.274-.192.218-.383.245-.713.082-.33-.164-1.393-.513-2.653-1.637-.98-.874-1.64-1.953-1.832-2.28-.192-.327-.02-.504.145-.668.148-.148.33-.383.495-.574.165-.192.22-.328.33-.547.11-.218.054-.41-.028-.574-.082-.164-.736-1.774-1.009-2.43-.266-.64-.538-.554-.736-.564-.19-.01-.408-.012-.627-.012-.218 0-.573.082-.873.41-.3.327-1.146 1.119-1.146 2.729s1.173 3.167 1.336 3.386c.164.219 2.31 3.527 5.596 4.945.782.337 1.392.539 1.868.69.786.25 1.502.214 2.067.13.63-.093 1.953-.799 2.225-1.53.273-.73.273-1.356.191-1.487-.082-.131-.273-.212-.603-.376z"/></svg>
+                        </a>
+                        <a href="mailto:arkafadhillah3@gmail.com" class="social-item email-btn" title="Email">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        </a>
+                       <a href="https://github.com/FadhilahAryaaaa" target="_blank" rel="noopener noreferrer" class="social-item github" title="GitHub">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="#ffffff"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom-row">
+                <p>&copy; 2026 Arya Fadhilah W.R. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+<!------------------------------------------------------------------------------------------------------------->
+    <script src="script.js"></script>
+</body>
+<!------------------------------------------------------------------------------------------------------------->
+</html>
+<!------------------------------------------------------------------------------------------------------------->
